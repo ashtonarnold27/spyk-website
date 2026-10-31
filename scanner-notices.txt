@@ -1,0 +1,18 @@
+Cardfolio scanner beta — English cards, one card per photo.
+
+Text recognition: Tesseract.js 7.0.0, Apache-2.0. The OCR engine and model run in a Web Worker on the visitor's device. This is local OCR (which uses a trained recognition model), not a paid cloud AI service.
+Tesseract core: see CORE-LICENSE.txt.
+English model: tesseract-ocr/tessdata_fast, https://github.com/tesseract-ocr/tessdata_fast , Apache-2.0. The model is downloaded only when recognition starts. No cloud inference endpoint is used.
+
+Card catalogs are queried on demand. Photos are not sent to catalog providers. Providers see requested names, card numbers and set codes as well as ordinary request metadata such as the client's network address.
+- Pokémon: https://tcgdex.dev/ ; https://github.com/tcgdex/cards-database (MIT, Copyright (c) 2021 TCGdex). Full MIT notice: https://github.com/tcgdex/cards-database/blob/master/LICENSE . No bulk catalog data is redistributed here.
+- Magic: https://scryfall.com/docs/api . Keep requests below 10 per second. This application makes sequential, paced lookups and caches repeated queries in memory. No bulk database is downloaded or redistributed.
+- One Piece: https://www.optcgapi.com/documentation . Public consumption API, no authentication. Requests use exact printed codes and are cached in memory. No prices are displayed or used.
+
+Card names, artwork and game marks belong to their respective rights holders. This implementation does not grant rights to redistribute artwork or imply affiliation with the publishers. Reference images are requested only for candidate results. Confirm commercial data and artwork permissions before a broad commercial launch.
+
+Live camera uses local Sobel edges, connected contours, convex hull geometry and a perspective warp. No cloud video or AI service is used. Auto-capture is heuristic and may miss low-contrast or cluttered scenes. Local PDF rendering uses PDF.js 6.4.299 (Apache-2.0); see pdf/LICENSE.txt.
+
+Limits: manual crop/rotation remain available; no guaranteed identification; no grading, authenticity assessment, foil detection, Japanese OCR, full offline catalog, or background price monitoring. Image fingerprints are rough similarity hints, not identity probabilities. Users must confirm the exact printing and treatment before transferring metadata to their account.
+
+HEIC/HEIF input: libheif-js 1.23.5, LGPL-3.0, with libheif/libde265 notices in heic/LICENSE and heic/JS-LICENSE.txt. The unmodified decoder module is self-hosted under heic/libheif-bundle.mjs and loaded separately in a worker only when native image decoding fails. Source/build locations and replacement information: heic/SOURCE.txt. Photo conversion stays on the device.
