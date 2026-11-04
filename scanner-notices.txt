@@ -1,4 +1,4 @@
-Cardfolio scanner beta — English cards, one card per photo.
+Spyk scanner beta — English cards, one card per photo.
 
 Text recognition: Tesseract.js 7.0.0, Apache-2.0. The OCR engine and model run in a Web Worker on the visitor's device. This is local OCR (which uses a trained recognition model), not a paid cloud AI service.
 Tesseract core: see CORE-LICENSE.txt.
