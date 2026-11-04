@@ -13,3 +13,10 @@
 #camera-live-status{position:absolute;top:10px;left:10px;right:10px;z-index:2;border-radius:8px;padding:9px 12px;background:#10231ee6;color:white;font-size:12px;line-height:1.5;text-align:center;pointer-events:none}
 
 .identity-finish{margin-top:22px;padding:16px;border:1px solid #dce5d2;border-radius:12px;background:#f7f9f4}.identity-finish label{display:flex;justify-content:space-between;gap:12px;font-size:14px;font-weight:650}.identity-finish output{color:var(--brand,#285e45);text-align:right}.identity-finish p{font-size:12px;line-height:1.5;color:#65745f;margin:9px 0 12px}.identity-finish input[type=range]{width:100%;min-height:36px;accent-color:var(--brand,#285e45);padding:0;background:transparent;border:0}.finish-labels{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}.finish-labels button{padding:8px 3px;min-height:38px;font-size:11px;line-height:1.3;border:1px solid transparent;background:transparent}.finish-labels button[aria-pressed=true]{background:#e8f2dd;border-color:#7d9870;color:#264d36}.finish-labels button:focus-visible{outline:2px solid #285e45;outline-offset:2px}
+
+/* Compact confirmation keeps the live preview visually present. */
+#identify-card::backdrop{background:#10251d88}.identity-finish{margin:12px 0;padding:0;border:0;background:none}.identity-finish label{justify-content:flex-end;align-items:center;font-size:12px;gap:8px}.identity-finish select{width:auto;max-width:190px;padding:7px 10px;font-size:12px}.identity-actions{margin-top:14px}.scan-queue-row{justify-content:space-between;margin-top:12px;flex-wrap:wrap;font-size:12px}.scan-queue-row>span{flex:1;min-width:180px}#save-original-frame{display:block;margin-top:8px}#save-original-frame[hidden]{display:none}
+#scan-test-panel{margin-top:16px}
+#scan-test-panel h2{margin:0 0 6px}
+.scan-test-flags{display:flex;flex-wrap:wrap;gap:16px;margin:0 0 10px;font-size:13px}
+.scan-test-flags label{display:flex;align-items:center;gap:6px}
