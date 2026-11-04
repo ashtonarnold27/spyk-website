@@ -1,0 +1,32 @@
+<!doctype html><html lang="en" data-account-gated><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>Spyk — Card lookup</title><link rel="stylesheet" href="style.css?v=8663f140e56a"><link rel="stylesheet" href="playtest-theme.css?v=a67a7e1874f2"><link rel="stylesheet" href="lookup.css?v=d6f5957d4712"><script src="brand.js?v=787aedb793c1" defer></script><style>html[data-account-gated] #lookup-main>*:not(.lookup-gate){visibility:hidden}</style></head>
+<body class="lookup-page">
+<header><a class="brand" href="index.html"><span class="brand-symbol" aria-hidden="true">▧</span>playtest.</a>
+<nav class="site-nav" aria-label="Main navigation"><a href="scanner.html">Card scanner</a><a href="lookup.html" aria-current="page">Card lookup</a><a href="account.html">My collection</a></nav>
+<div class="actions"><div class="theme-control"><button class="theme-toggle" id="theme-toggle" type="button" aria-expanded="false" aria-controls="theme-options">Colors ◐</button><div class="theme-options" id="theme-options" role="group" aria-label="Color combinations" hidden><button type="button" data-theme-option="mint" aria-pressed="true"><span class="theme-chip mint" aria-hidden="true"></span>Forest &amp; lime</button><button type="button" data-theme-option="blue" aria-pressed="false"><span class="theme-chip blue" aria-hidden="true"></span>Ink &amp; sky</button><button type="button" data-theme-option="coral" aria-pressed="false"><span class="theme-chip coral" aria-hidden="true"></span>Plum &amp; peach</button></div></div><span class="local-pill" id="ebay-status" data-tone="">Checking eBay…</span></div></header>
+<main id="lookup-main">
+<div class="eyebrow">CARD LOOKUP</div><h1>Find a card. See the market.</h1>
+<p class="lookup-intro">Search the Pokémon, Magic and One Piece catalogs, pick the exact printing, and see what it's listed for on eBay right now.</p>
+
+<section class="panel pad lookup-search">
+<form id="catalog-form" class="lookup-form"><label class="field">Game<select id="lookup-game"><option>Pokémon</option><option>Magic</option><option>One Piece</option></select></label><label class="field grow">Card<input id="lookup-q" type="search" autocomplete="off" required maxlength="120"></label><button class="primary" type="submit">Search</button></form>
+<p id="catalog-status" class="lookup-status" role="status" hidden></p>
+<div id="catalog-results" class="catalog-grid"></div>
+</section>
+
+<section id="listings-panel" class="panel pad listings-panel" hidden>
+<div id="selected-card" class="selected-card"></div>
+<p id="env-note" class="env-note" hidden><b>Sandbox test data.</b> These listings come from eBay's developer Sandbox, which holds fake test items — not real cards or real prices. Switch to production keys to see the live marketplace.</p>
+<form id="ebay-form" class="lookup-form ebay-form"><label class="field grow">eBay search<input id="ebay-q" type="search" maxlength="120"></label>
+<label class="field">Sort<select id="ebay-sort"><option value="best">Best match</option><option value="price">Price: low to high</option><option value="priceDesc">Price: high to low</option><option value="newest">Newly listed</option></select></label>
+<label class="field">Type<select id="ebay-buying"><option value="all">All listings</option><option value="buyNow">Buy It Now</option><option value="auction">Auctions</option></select></label>
+<label class="check"><input id="ebay-cards-only" type="checkbox" checked> Trading cards only</label>
+<button type="submit">Update</button></form>
+<p id="ebay-search-status" class="lookup-status" role="status" hidden></p>
+<div id="listing-stats" class="listing-stats" hidden></div>
+<p class="asking-note">Prices shown are current asking prices on active listings, not sold prices.</p>
+<div id="listings" class="listings"></div>
+<div id="pager" class="pager" hidden><button id="prev-page" type="button">← Previous</button><span id="page-label"></span><button id="next-page" type="button">Next →</button></div>
+</section>
+</main>
+<footer><span>playtest. · Listings provided by eBay. Spyk may earn a commission from eBay links.</span><a href="account.html">My collection ↗</a></footer>
+<script src="account-config.js?v=c8c65df41e0c"></script><script src="lookup.js?v=1b2b2e1ba621" defer></script></body></html>
