@@ -20,3 +20,74 @@
 #scan-test-panel h2{margin:0 0 6px}
 .scan-test-flags{display:flex;flex-wrap:wrap;gap:16px;margin:0 0 10px;font-size:13px}
 .scan-test-flags label{display:flex;align-items:center;gap:6px}
+/* Redesign (Nov 10): one clear path on phones; two columns on wide screens. */
+.scan-v2{background:var(--paper)}
+.scan-v2 .scan-header{position:sticky;top:0;z-index:20;height:auto;max-width:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;padding-top:max(10px,env(safe-area-inset-top));background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.scan-v2 .scan-header .brand{font-size:21px}
+.scan-v2 .brand-symbol{width:28px;height:28px;font-size:19px;border-radius:9px}
+.scan-nav{display:flex;align-items:center;gap:6px}
+.scan-nav>a{font-size:13px;font-weight:600;text-decoration:none;color:var(--ink);padding:8px 10px;border-radius:999px}
+.scan-nav>a:hover{background:var(--soft)}
+.scan-nav .scan-nav-primary{background:var(--brand);color:#fff}
+.scan-nav .scan-nav-primary:hover{background:var(--hero)}
+.scan-v2 .theme-toggle{width:36px;height:36px;padding:0;border-radius:999px;font-size:16px}
+.scan-v2 .scan-main{max-width:640px;margin:0 auto;padding:20px 16px 40px;min-height:0}
+.scan-hero{text-align:center;margin-bottom:16px}
+.scan-v2 .scan-hero h1{font-size:30px;line-height:1.15;letter-spacing:-1px;margin:4px 0 6px}
+.scan-v2 .scanner-intro{font-size:14px;line-height:1.5;color:var(--muted);margin:0 auto 16px;max-width:420px}
+.game-switch{display:inline-flex;padding:4px;gap:4px;background:#fff;border:1px solid var(--line);border-radius:999px;box-shadow:0 1px 2px #0000000a;max-width:100%}
+.game-switch button{border:0;border-radius:999px;padding:9px 16px;font-size:14px;font-weight:650;background:transparent;color:var(--muted);white-space:nowrap}
+.game-switch button[aria-checked=true]{background:var(--brand);color:#fff}
+.game-switch button:not([aria-checked=true]):hover{background:var(--soft);color:var(--ink)}
+.game-select{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.scan-layout{display:grid;gap:16px}
+.scan-v2 .capture-panel{padding:16px;margin:0;border-radius:18px;box-shadow:0 1px 3px #0000000d}
+.scan-v2 .capture-panel .camera-buttons{display:grid;gap:10px;margin:0;justify-content:stretch}
+.scan-v2 .scan-cta{width:100%;min-height:56px;font-size:17px;font-weight:700;border-radius:14px;display:flex;align-items:center;justify-content:center;gap:10px;max-width:none}
+.scan-v2 .capture-panel #camera-frame{max-width:none;margin:0}
+.camera-secondary{display:flex;gap:10px}
+.camera-secondary button{flex:1;min-height:44px;border-radius:12px}
+.camera-secondary:not(:has(button:not([hidden]))){display:none}
+.scan-v2 #camera-view{margin:-4px -4px 12px}
+.scan-v2 .camera-stage{border-radius:14px;background:#0f1a15}
+.scan-v2 #camera-view .camera-auto{display:flex;gap:8px;align-items:center;justify-content:center;font-size:12px;color:var(--muted);margin-top:8px}
+.scan-v2 .capture-panel #camera-status{font-size:13px;color:var(--muted);margin:12px 0 0;text-align:center}
+.scan-v2 .capture-panel #scan-progress:not(:empty){margin-top:8px}
+.scan-alternatives{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.scan-v2 .scan-alternatives .photo-picker{margin:0;padding:14px 10px;gap:4px;border:1px solid var(--line);border-style:solid;border-radius:14px;background:var(--soft);text-align:center;font-size:22px;min-height:112px;justify-content:center}
+.scan-v2 .scan-alternatives .photo-picker:hover{border-color:var(--brand)}
+.scan-v2 .scan-alternatives .photo-picker b{font-size:14px;color:var(--ink)}
+.scan-v2 .scan-alternatives .photo-picker small{font-size:11px;color:var(--muted);line-height:1.35}
+.scan-v2 .scan-alternatives input[type=file]{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.scan-v2 .scan-alternatives .photo-picker{position:relative}
+.scan-v2 .scan-alternatives .photo-picker:focus-within{outline:3px solid var(--brand);outline-offset:2px}
+.scan-v2 #read-card{margin-top:14px;min-height:48px;border-radius:12px}
+.scan-v2 #read-card:disabled{display:none}
+.scan-v2 .capture-panel details{border-top:1px solid var(--line);margin-top:14px;padding-top:12px}
+.scan-v2 .capture-panel summary,.scan-v2 .correction-panel>summary{font-size:13px;font-weight:600;color:var(--ink);cursor:pointer;padding:4px 0}
+.scan-v2 .scan-settings .camera-auto{display:flex;gap:8px;font-size:12px;color:var(--muted);margin-top:8px}
+.scan-v2 .results-panel{margin:0;border-radius:18px;padding:20px}
+.scan-v2 .result-placeholder{text-align:center;padding:20px 8px;color:var(--muted)}
+.scan-v2 .result-placeholder span{font-size:30px;color:var(--brand)}
+.scan-v2 .result-placeholder h2{font-size:17px;margin:8px 0 4px;color:var(--ink)}
+.scan-v2 .result-placeholder p{font-size:13px;margin:0}
+.scan-v2 .correction-panel{border-radius:18px;padding:16px 20px;margin:0}
+.scan-v2 .correction-panel[open]>summary{margin-bottom:8px}
+.scan-v2 #scanner-debugger,.scan-v2 #capture-review-actions,.scan-v2 #confirmed-scans{border-radius:18px;margin:0}
+.scan-v2 .scan-footer{display:block;margin-top:24px;text-align:center;padding:0;border:0;background:none;height:auto}
+.scan-v2 .scanner-privacy{font-size:12px;color:var(--muted);margin:0 0 8px}
+.scan-v2 .scan-footnote{font-size:11px;color:var(--muted);line-height:1.6;border:0;padding:0;margin:0}
+.scan-v2 .scan-footnote a{color:inherit}
+.scan-v2 button{min-height:40px}
+@media(max-width:380px){.game-switch button{padding:8px 11px;font-size:13px}.scan-nav>a:not(.scan-nav-primary){display:none}}
+@media(min-width:1000px){
+.scan-v2 .scan-main{max-width:1180px;padding:32px 32px 48px}
+.scan-v2 .scan-hero h1{font-size:38px}
+.scan-layout{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:start;gap:22px}
+.scan-side{display:grid;gap:16px;position:sticky;top:76px}
+.scan-v2 #scanner-debugger,.scan-v2 #capture-review-actions{grid-column:1/-1;order:5}
+}
+@media(max-width:999px){.scan-side{display:grid;gap:16px}}
+.scan-v2 #capture-adjustments:not(:has(#crop-controls:not([hidden]))){display:none}
+@media(max-width:600px){.scan-v2 input:not([type=checkbox]):not([type=range]):not([type=file]),.scan-v2 select,.scan-v2 textarea{font-size:16px}.scan-v2 .correction-panel .form-grid{grid-template-columns:1fr;gap:0}}
+.scan-public #scanner-debugger,.scan-public #inspect-capture,.scan-public [data-identify-inspect]{display:none!important}
