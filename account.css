@@ -5,3 +5,5 @@
 .auth-panel .check{display:flex;gap:9px;align-items:flex-start;font-size:12px;line-height:1.45;margin:14px 0 18px;color:var(--ink);max-width:none;overflow:visible;white-space:normal}
 .auth-panel .check input{width:auto;margin:2px 0 0;padding:0}
 .danger-button{background:#a35444!important;border-color:#a35444!important;color:#fff!important}
+
+.auth-captcha{margin:12px 0 4px;min-height:65px}
