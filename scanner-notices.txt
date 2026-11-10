@@ -6,6 +6,7 @@ English model: tesseract-ocr/tessdata_fast, https://github.com/tesseract-ocr/tes
 
 Card catalogs are queried on demand. Photos are not sent to catalog providers. Providers see requested names, card numbers and set codes as well as ordinary request metadata such as the client's network address.
 - Pokémon: https://tcgdex.dev/ ; https://github.com/tcgdex/cards-database (MIT, Copyright (c) 2021 TCGdex). Full MIT notice: https://github.com/tcgdex/cards-database/blob/master/LICENSE . No bulk catalog data is redistributed here.
+- Pokémon pictures TCGdex doesn't have: Pokémon TCG API card data, https://github.com/PokemonTCG/pokemon-tcg-data ; images load from images.pokemontcg.io. Looked up by card ID in Spyk's own catalog.
 - Magic: https://scryfall.com/docs/api . Keep requests below 10 per second. This application makes sequential, paced lookups and caches repeated queries in memory. No bulk database is downloaded or redistributed.
 - One Piece: https://www.optcgapi.com/documentation . Public consumption API, no authentication. Requests use exact printed codes and are cached in memory. No prices are displayed or used.
 
